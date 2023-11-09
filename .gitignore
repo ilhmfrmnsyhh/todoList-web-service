@@ -1,0 +1,21 @@
+# Direktori node_modules - Anda tidak perlu menyimpan dependensi di repositori Anda.
+node_modules/
+
+# Berkas log atau berkas yang dihasilkan oleh Express.js
+logs/
+*.log
+
+# Berkas konfigurasi lingkungan. Anda harus menggunakan berkas konfigurasi untuk ini.
+.env
+
+# Berkas konfigurasi untuk Visual Studio Code
+.vscode/
+
+# Berkas konfigurasi proyek atau sistem
+.project
+.settings
+.classpath
+
+# Berkas yang dihasilkan oleh editor atau IDE
+.DS_Store
+Thumbs.db
