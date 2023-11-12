@@ -6,6 +6,7 @@
 - **Endpoint:** `GET /api/todos`
 - **Deskripsi:** Mendapatkan semua daftar To-Do List.
 - **Authorization:** Diperlukan (Token JWT)
+- **Alur:** Masukkan Token > send > maka akan muncul semua todo list.
 
 **Response 200 OK:**
 ```json
@@ -28,6 +29,7 @@
 - **Endpoint:** `GET /api/todos/:id`
 - **Deskripsi:** Mendapatkan To-Do berdasarkan ID.
 - **Authorization:** Diperlukan (Token JWT)
+- **Alur:** Masukkan Token > Masukkan ID > send > Keluar hasil todo list sesuai ID.
 
 **Response 200 OK:**
 ```json
@@ -48,6 +50,7 @@
 - **Endpoint:** `POST /api/todos`
 - **Deskripsi:** Membuat To-Do baru.
 - **Authorization:** Diperlukan (Token JWT)
+- **Alur:** new todo pada body > masukkan token sbgai auth > send > todo baru berhasil ditambahkan.
 
 **Request Body:**
 ```json
@@ -77,6 +80,7 @@
 - **Endpoint:** `PUT /api/todos/:id`
 - **Deskripsi:** Memperbarui To-Do berdasarkan ID.
 - **Authorization:** Diperlukan (Token JWT)
+- **Alur:** Masukkan id todo yg ingin di ubah > masukkan token sbgai auth > perbarui judul todo > send > todo berhasil di update.
 
 **Request Body:**
 ```json
@@ -106,6 +110,7 @@
 - **Endpoint:** `DELETE /api/todos/:id`
 - **Deskripsi:** Hapus To-Do berdasarkan ID.
 - **Authorization:** Diperlukan (Token JWT)
+- **Alur:** Masukkan id todo > masukkan token sbgai auth > send > todo berhasil dihapus.
 
 **Response 200 OK:**
 ```json
@@ -129,6 +134,7 @@
 - **Endpoint:** `DELETE /api/todos`
 - **Deskripsi:** Hapus semua To-Do spesifik pengguna.
 - **Authorization:** Diperlukan (Token JWT)
+- **Alur:** Masukkan token sbgai auth > send > semua todo berhasil dihapus.
 
 **Response 200 OK:**
 ```json
@@ -143,6 +149,7 @@
 
 - **Endpoint:** `POST /api/auth/signup`
 - **Deskripsi:** Mendaftarkan pengguna baru.
+- **Alur:** Isi username, email, password > terdaftar dan mendapatkan ID.
 
 **Request Body:**
 ```json
@@ -165,6 +172,7 @@
 
 - **Endpoint:** `POST /api/auth/signin`
 - **Deskripsi:** Memungkinkan pengguna masuk dan mendapatkan token JWT.
+- **Alur** MAsukkan email & password > maka akan mendapatkan token.
 
 **Request Body:**
 ```json
