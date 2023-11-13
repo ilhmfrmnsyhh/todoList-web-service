@@ -33,17 +33,21 @@ const signup = async (req, res) => {
 
 const signin = async (req, res) => {
   try {
+    console.log('req.body')
     const { email, password } = req.body;
     const user = await User.findOne({ email: email });
     if (!user) {
       return res.status(401).send("Email or password is incorrect");
     }
 
+    console.log('findone')
+
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
       return res.status(401).send("Password is incorrect");
     }
 
+    console.log('passinv')
     const token = jwt.sign(
       {
         user: {
@@ -62,6 +66,7 @@ const signin = async (req, res) => {
       token,
     });
   } catch (error) {
+    console.log(error)
     return res.status(500).json({ error: "Internal Server Error" });
   }
 };
